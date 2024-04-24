@@ -1,0 +1,65 @@
+.container{
+    display: grid;
+    grid-template-columns: 20% 80%;
+
+}
+
+.main h3{
+    font-weight: 500px;
+    font-size: 24px;
+    line-height: 32px;
+    color: #2B2B2B;
+
+}
+
+.sideBar{
+    margin-top: 15px;
+}
+
+.sideBar .sidebar-option{
+    width: 200px;
+    height: 220px;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+}
+
+.collection-list ul {
+    text-decoration: none;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.collection-list ul li{
+    margin: 5px 0px;
+}
+
+.collection-list span{
+    margin-right: 5px;
+    width: 14px;
+    height: 14px;
+}
+
+.sideBar .sidebar-option .sidebar-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result{
+    color: gray;
+    text-align: center;
+}
+
+.main .header p{
+    width: 240px;
+    font-weight: 400px;
+    font-size: 13px;
+}
+
+
+  
+
