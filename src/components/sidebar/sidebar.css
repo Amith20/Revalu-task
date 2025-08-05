@@ -1,0 +1,248 @@
+.sidebar-option {
+  width: 200px;
+  min-height: 220px;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.sidebar-option:hover {
+  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.25), 0 8px 25px 0 rgba(0, 0, 0, 0.22);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 8px 0;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-header:hover {
+  background-color: #f5f5f5;
+}
+
+.sidebar-header:focus {
+  outline: 2px solid #8C66E0;
+  outline-offset: 2px;
+}
+
+.sidebar-header p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 14px;
+  color: #2B2B2B;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  color: #666;
+}
+
+.arrow.expanded {
+  transform: rotate(180deg);
+}
+
+.collection-list {
+  margin-top: 12px;
+}
+
+.collection-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.collection-list li {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  margin: 4px 0;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.collection-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.collection-list li.selected {
+  background-color: #ECE6FA;
+  color: #8C66E0;
+}
+
+.collection-list li:focus {
+  outline: 2px solid #8C66E0;
+  outline-offset: 2px;
+}
+
+.folder-icon {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.collection-name {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.collection-count {
+  font-size: 11px;
+  color: #666;
+  background-color: #f0f0f0;
+  padding: 2px 6px;
+  border-radius: 10px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.collection-list li.selected .collection-count {
+  background-color: #8C66E0;
+  color: white;
+}
+
+.collection-list hr {
+  margin: 12px 0;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+}
+
+.add-collection-btn {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.add-collection-btn:hover {
+  background-color: #f0f0f0;
+  color: #8C66E0;
+}
+
+.add-collection-btn:focus {
+  outline: 2px solid #8C66E0;
+  outline-offset: 2px;
+}
+
+.add-icon {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-collection-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.add-collection-form input,
+.add-collection-form textarea {
+  padding: 8px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 13px;
+  transition: border-color 0.2s ease;
+}
+
+.add-collection-form input:focus,
+.add-collection-form textarea:focus {
+  outline: none;
+  border-color: #8C66E0;
+}
+
+.add-collection-form textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.cancel-btn,
+.save-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.cancel-btn {
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+.cancel-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.save-btn {
+  background-color: #8C66E0;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #7a5bc8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sidebar-option {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .collection-list li {
+    padding: 12px;
+  }
+  
+  .add-collection-form {
+    padding: 16px;
+  }
+}
+
+/* Animation for new collections */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.collection-list li {
+  animation: slideIn 0.3s ease;
+} 
