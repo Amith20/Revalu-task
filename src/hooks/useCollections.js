@@ -92,10 +92,10 @@ export const useCollections = () => {
   const resetCollections = useCallback(() => {
     try {
       const defaultCollections = [
-        { id: 1, name: "Collection A", description: "First collection", count: 87 },
-        { id: 2, name: "Collection B", description: "Second collection", count: 45 },
-        { id: 3, name: "Collection C", description: "Third collection", count: 23 },
-        { id: 4, name: "Collection D", description: "Fourth collection", count: 12 },
+        { id: 1, name: "Collection 1", description: "First collection", count: 87 },
+        { id: 2, name: "Collection 2", description: "Second collection", count: 45 },
+        { id: 3, name: "Collection 3", description: "Third collection", count: 23 },
+        { id: 4, name: "Collection 4", description: "Fourth collection", count: 12 },
       ];
       setCollections(defaultCollections);
       localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultCollections));
