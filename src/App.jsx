@@ -2,7 +2,7 @@ import "./App.css";
 import Card from "./components/card/card";
 import NavBar from "./components/navbar/navbar";
 import Sidebar from "./components/sidebar/sidebar";
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import { useCollections } from "./hooks/useCollections";
 
 // Global variables - bad practice
