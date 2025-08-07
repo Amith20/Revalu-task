@@ -184,7 +184,7 @@ function App() {
 
         <section className="main" role="region" aria-label="Collections content">
           <header className="header">
-            <h1 className="main-title">My Collections</h1>
+            <h2 className="main-title">My Collections</h2>
             <p className="main-description">
               Introducing collections: the ability to organise your materials
               your way
