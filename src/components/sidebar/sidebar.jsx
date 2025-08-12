@@ -62,7 +62,7 @@ function Sidebar({ collections, selectedCollection, onCollectionSelect, onAddCol
       {isExpanded && (
         <div className="collection-list">
           <ul role="list">
-            {collections.map((collection) => (
+            {collections?.map((collection) => (
               <li 
                 key={collection.id}
                 role="listitem"
@@ -94,7 +94,6 @@ function Sidebar({ collections, selectedCollection, onCollectionSelect, onAddCol
                 onChange={(e) => setNewCollection(prev => ({ ...prev, name: e.target.value }))}
                 maxLength={40}
                 required
-                aria-label="Collection name"
               />
               <textarea
                 placeholder="Collection description"
@@ -102,7 +101,6 @@ function Sidebar({ collections, selectedCollection, onCollectionSelect, onAddCol
                 onChange={(e) => setNewCollection(prev => ({ ...prev, description: e.target.value }))}
                 maxLength={140}
                 required
-                aria-label="Collection description"
               />
               <div className="form-actions">
                 <button type="button" onClick={handleCancel} className="cancel-btn">
@@ -118,7 +116,6 @@ function Sidebar({ collections, selectedCollection, onCollectionSelect, onAddCol
               className="add-collection-btn"
               onClick={handleAddClick}
               onKeyDown={(e) => handleKeyDown(e, handleAddClick)}
-              aria-label="Add new collection"
             >
               <span className="add-icon" aria-hidden="true">
                 <FiFolderPlus />
